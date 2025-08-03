@@ -24,7 +24,7 @@ const formSlice = createSlice({
 			state.step += 1
 		},
 		prevStep: state => {
-			state.step -= 1
+			if (state.step > 1) state.step -= 1
 		},
 		setStep: (state, action) => {
 			state.step = action.payload
@@ -41,7 +41,9 @@ const formSlice = createSlice({
 		setAddons: (state, action) => {
 			state.addons = action.payload
 		},
-		resetForm: () => initialState,
+		resetForm: state => {
+			return initialState
+		},
 	},
 })
 

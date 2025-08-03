@@ -25,7 +25,7 @@ export default function AddOns() {
 				{addonList.map(addon => (
 					<div
 						key={addon.name}
-						className="flex items-center justify-between border p-3 rounded"
+						className="flex items-center justify-between border p-2 mb-2 rounded cursor-pointer"
 					>
 						<label className="flex items-center space-x-2">
 							<input
@@ -42,16 +42,16 @@ export default function AddOns() {
 						</span>
 					</div>
 				))}
-				<div className="flex justify-between mt-4">
+				<div className="flex justify-between mt-6">
 					<button
 						onClick={() => dispatch(prevStep())}
-						className="text-gray-600"
+						className="bg-gray-300 px-4 py-2 rounded"
 					>
-						Back
+						Go Back
 					</button>
 					<button
 						onClick={() => dispatch(nextStep())}
-						className="bg-blue-600 text-white px-4 py-2 rounded"
+						className="bg-blue-500 text-white px-4 py-2 rounded"
 					>
 						Next Step
 					</button>
